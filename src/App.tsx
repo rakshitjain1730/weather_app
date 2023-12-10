@@ -43,7 +43,7 @@ function App() {
             </div>
             {data && (
               <div>
-                <h2>Weather Information</h2>
+                <h1>Weather App</h1>
                 <p>Location: {data.name}</p>
                 <p>Temperature: {data.main && data.main.temp}</p>
                 <p>
