@@ -39,20 +39,13 @@ function Show() {
     }
   }
 
-  
+  const switchUnit = () => {
+    setUnit(unit === 'metric' ? 'imperial' : 'metric');
+  };
   
   const choose = () => {
     if (city !== "") getApiData();
   }
-
-  //   function getlocation(){
-  //    if (navigator.geolocation) {
-  //   navigator.geolocation.getCurrentPosition(success, error);
-  // } else {
-  //   console.log("Geolocation not supported");
-  // }
-
-  // }
 
   useEffect(() => {
     getApiData();
@@ -72,7 +65,7 @@ function Show() {
                   </div>
                 </div>
                 <div className="d-flex flex-column text-center mt-5 mb-4">
-                  <h6 className="display-4 mb-0 font-weight-bold" style={{ color: '#1C2331' }}> {data.main.temp}°C </h6>
+                  <h6 className="display-4 mb-0 font-weight-bold" style={{ color: '#1C2331' }} onClick={switchUnit}> {unit === 'metric' ? `${data.main.temp}°C` : `${(data.main.temp * 9/5) + 32}°F`} </h6>
                   <span style={{ color: '#868B94' }}>{data.name}</span>
                 </div>
 
