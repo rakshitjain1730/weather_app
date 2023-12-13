@@ -102,7 +102,7 @@ function Show() {
       
       {geolocationBlocked ? (
         <div className="geolocation-blocked" >
-          <img src={require('./errorimg.jpeg')} alt="Blocked Geolocation" />
+          <img className="imgg" src={require('./error.jpg')} alt="Blocked Geolocation" />
         </div>
       ) :
       <>

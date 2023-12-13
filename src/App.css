@@ -9,6 +9,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.imgg{
+    height: 600px;
+    width: 100%;
+}
+
 .container {
     background: #171717;
     color: #fff;
